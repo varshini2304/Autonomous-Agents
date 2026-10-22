@@ -1,0 +1,6 @@
+from typing import Protocol
+
+class ModelProvider(Protocol):
+    @property
+    def mode(self) -> str: ...
+    async def complete_json(self, system_prompt: str, user_content: str) -> str: ...
